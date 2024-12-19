@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Lar dos Anjos - Adote um Pet</title>
+    <!-- Normalize CSS -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+    <!-- Custom CSS (compilado a partir de SASS) -->
+    <link rel="stylesheet" href="css/estilo.css">
+    <style>
+        body {
+            background-color: #f5f5dc; /* Cor de fundo bege */
+        }
+
+        /* Alteração na navbar para azul suave */
+        .navbar {
+            background-color: #A0DAD6; /* Azul suave */
+        }
+
+        .navbar .nav-link {
+            color: #000; /* Cor do texto da navbar */
+        }
+
+        .navbar .nav-link.active {
+            font-weight: bold; /* Destaque para o link ativo */
+        }
+
+        .footer {
+            background-color: #2e2e2e; /* Cor do rodapé */
+        }
+
+        /* Ícone do Instagram */
+        #instagram-icon {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000; /* Garante que o ícone esteja acima de outros elementos */
+        }
+
+        #instagram-icon img {
+            width: 50px; /* Tamanho do ícone */
+        }
+
+        /* Estilo para o iframe */
+        .adopt-form {
+            width: 100%;
+            height: 800px;
+            border: none;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-light">
+        <div class="container flex-column align-items-center">
+            <a class="navbar-brand" href="index.html">
+                <img src="imagens/logo.png" alt="Logo Lar dos Anjos" width="70">
+            </a>
+            <div class="d-flex">
+                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link" href="quem-somos.html">Quem Somos</a>
+                <a class="nav-link" href="contato.html">Contato</a>
+                <a class="nav-link active" href="adote.html">Adote</a>
+                <a class="nav-link" href="doar.html">Doação</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Seção de Adoção -->
+    <section class="adopt py-5">
+        <div class="container text-center">
+            <h2>Adote um Pet</h2>
+            <p>Preencha o formulário abaixo para iniciar o processo de adoção de um animal!</p>
+
+            <!-- Formulário Google Embed -->
+            <iframe class="adopt-form" src="https://docs.google.com/forms/d/e/1FAIpQLSdrIprMrS_7kVD2qahbeLvKy1iklhH7H3hi_4cQ8C6W59f9WQ/viewform?embedded=true" width="640" height="554" frameborder="0" marginheight="0" marginwidth="0">Carregando…</iframe>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="footer text-light py-3">
+        <div class="container text-center">
+            <p>&copy; 2024 Lar dos Anjos. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Ícone do Instagram -->
+    <a href="https://www.instagram.com/lardosanjospet/" target="_blank" id="instagram-icon">
+        <img src="imagens/insta1.png" alt="Instagram" />
+    </a>
+
+    <!-- Bootstrap JS e dependências -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/scripts.js"></script>
+</body>
+</html>

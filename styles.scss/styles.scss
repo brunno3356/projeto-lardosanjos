@@ -1,0 +1,133 @@
+// Variáveis de cores
+$primary-color: #5c6bc0;
+$secondary-color: #26a69a;
+$background-color: #f4f4f9;
+$font-color: #333;
+$light-color: #fff;
+$dark-color: #2e2e2e;
+
+// Tipografia
+$font-family: 'Roboto', sans-serif;
+$heading-font-family: 'Poppins', sans-serif;
+
+// Global
+body {
+  font-family: $font-family;
+  background-color: $background-color;
+  color: $font-color;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: $primary-color;
+  &:hover {
+    color: $secondary-color;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $heading-font-family;
+  color: $dark-color;
+  margin-bottom: 1rem;
+}
+
+// Navbar
+.navbar {
+  background-color: $primary-color;
+  .navbar-brand {
+    img {
+      max-width: 80px;
+    }
+  }
+  .nav-link {
+    color: $light-color;
+    font-weight: bold;
+    &:hover {
+      color: $secondary-color;
+    }
+  }
+}
+
+// Seções
+section {
+  padding: 60px 0;
+  text-align: center;
+
+  &.contact, &.adopt {
+    background-color: $light-color;
+    padding: 100px 0;
+  }
+}
+
+// Botões
+.btn {
+  padding: 10px 20px;
+  font-weight: bold;
+  &.btn-primary {
+    background-color: $primary-color;
+    border: none;
+    &:hover {
+      background-color: darken($primary-color, 10%);
+    }
+  }
+}
+
+// Formulários
+form {
+  input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid lighten($primary-color, 20%);
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+
+    &:focus {
+      border-color: $primary-color;
+      outline: none;
+      box-shadow: 0 0 5px rgba($primary-color, 0.5);
+    }
+  }
+
+  button {
+    cursor: pointer;
+    background-color: $secondary-color;
+    color: $light-color;
+    border: none;
+    border-radius: 5px;
+    padding: 12px;
+    font-weight: bold;
+    &:hover {
+      background-color: darken($secondary-color, 10%);
+    }
+  }
+}
+
+// Rodapé
+.footer {
+  background-color: $dark-color;
+  color: $light-color;
+  padding: 20px 0;
+  p {
+    margin: 0;
+  }
+}
+
+// Utilitários
+.text-center {
+  text-align: center;
+}
+
+.mt-4 {
+  margin-top: 1.5rem;
+}
+
+.mt-5 {
+  margin-top: 3rem;
+}
+
+.py-5 {
+  padding: 3rem 0;
+}

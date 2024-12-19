@@ -1,0 +1,185 @@
+.header {
+    display: flex;
+    flex-direction: column; /* Coloca logo e título em coluna */
+    align-items: center; /* Centraliza os itens */
+    justify-content: center; /* Centraliza verticalmente */
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto; /* Centraliza horizontalmente na página */
+}
+
+.header h1.display-4 {
+    text-align: center; /* Centraliza o texto dentro do h1 */
+    margin: 0; /* Remove a margem padrão */
+    font-size: 2.5rem; /* Ajuste o tamanho da fonte conforme necessário */
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5dc; /* Cor de fundo bege */
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #5c6bc0;
+}
+
+a:hover {
+    color: #26a69a;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    color: #2e2e2e;
+    margin-bottom: 1rem;
+}
+
+.navbar {
+    background-color: #5c6bc0;
+    display: flex; /* Flexbox para alinhar itens na navbar */
+    flex-direction: column; /* Coluna para logo e nav links */
+    align-items: center; /* Centraliza os itens */
+}
+
+.navbar .navbar-brand img {
+    max-width: 80px;
+}
+
+.navbar .nav-link {
+    color: #000;
+    font-weight: bold;
+    margin: 0 10px; /* Espaçamento entre os links */
+    position: relative; /* Necessário para o sublinhado */
+    text-decoration: none; /* Remove o sublinhado padrão */
+}
+
+.navbar .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px; /* Espessura do sublinhado */
+    width: 100%;
+    background: blue; /* Cor do sublinhado */
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.navbar .nav-link:hover::after {
+    transform: scaleX(1); /* Ativa a animação de sublinhado */
+}
+
+section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.importance {
+    display: flex; /* Flexbox para alinhar imagem e texto */
+    flex-direction: column; /* Coloca imagem e texto em coluna */
+    align-items: center; /* Centraliza os itens */
+    margin-top: 20px; /* Espaço acima da seção */
+}
+
+.importance img {
+    max-width: 300px; /* Tamanho da imagem */
+    margin-bottom: 20px; /* Espaço entre a imagem e o texto */
+}
+
+.btn {
+    padding: 10px 20px;
+    font-weight: bold;
+}
+
+.btn.btn-primary {
+    background-color: #5c6bc0;
+    border: none;
+}
+
+.btn.btn-primary:hover {
+    background-color: #495bb5;
+}
+
+form input, form textarea, form select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccd2e4;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+form input:focus, form textarea:focus, form select:focus {
+    border-color: #5c6bc0;
+    outline: none;
+    box-shadow: 0 0 5px rgba(92, 107, 192, 0.5);
+}
+
+form button {
+    cursor: pointer;
+    background-color: #26a69a;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 12px;
+    font-weight: bold;
+}
+
+form button:hover {
+    background-color: #219585;
+}
+
+.footer {
+    background-color: #2e2e2e;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.footer p {
+    margin: 0;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mt-4 {
+    margin-top: 1.5rem;
+}
+
+.mt-5 {
+    margin-top: 3rem;
+}
+
+.py-5 {
+    padding: 3rem 0;
+}
+
+.header-bg {
+    background-color: #00000000;
+}
+
+/* Estilo para o fundo bege da seção de Doações Bancárias */
+.icon-box {
+    background-color: #f5f5dc; /* Cor de fundo bege */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    margin-top: 20px;
+}
+
+/* Fundo bege para doações bancárias apenas */
+.donation-box {
+    background-color: #f5f5dc;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+

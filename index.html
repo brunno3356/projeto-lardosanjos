@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Lar dos Anjos - Proteção Animal</title>
+    <meta name="description" content="Somos uma ONG dedicada exclusivamente ao resgate, cuidado e adoção de cães. Nosso objetivo é proporcionar uma nova chance para cachorros abandonados e em situação de vulnerabilidade, oferecendo abrigo, alimentação, cuidados veterinários e, acima de tudo, muito amor. Acreditamos que cada cão merece uma família que o acolha com carinho, e trabalhamos incansavelmente para que eles encontrem um lar definitivo. Junte-se a nós nessa missão e ajude a transformar a vida desses animais!">
+    
+    <!-- Normalize CSS -->
+    <link rel="stylesheet" href="css/normali.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+    <!-- Custom CSS (compilado a partir de SASS) -->
+    <link rel="stylesheet" href="css/estilo.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f5f5dc; /* Cor de fundo bege */
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: #5c6bc0;
+        }
+
+        a:hover {
+            color: #26a69a;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+            color: #2e2e2e;
+            margin-bottom: 1rem;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: #A0DAD6; /* Azul suave */
+            display: flex; /* Flexbox para alinhar itens na navbar */
+            flex-direction: column; /* Coluna para logo e nav links */
+            align-items: center; /* Centraliza os itens */
+        }
+
+        .navbar .navbar-brand img {
+            max-width: 80px;
+        }
+
+        .navbar .nav-link {
+            color: #000;
+            font-weight: bold;
+            margin: 0 10px; /* Espaçamento entre os links */
+            position: relative; /* Necessário para o sublinhado */
+            text-decoration: none; /* Remove o sublinhado padrão */
+        }
+
+        .navbar .nav-link::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 2px; /* Espessura do sublinhado */
+            width: 100%;
+            background: blue; /* Cor do sublinhado */
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .navbar .nav-link:hover::after {
+            transform: scaleX(1); /* Ativa a animação de sublinhado */
+        }
+
+        section {
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .importance {
+            display: flex; /* Flexbox para alinhar imagem e texto */
+            flex-direction: column; /* Coloca imagem e texto em coluna */
+            align-items: center; /* Centraliza os itens */
+            margin-top: 20px; /* Espaço acima da seção */
+        }
+
+        .importance img {
+            max-width: 300px; /* Tamanho da imagem */
+            margin-bottom: 20px; /* Espaço entre a imagem e o texto */
+        }
+
+        .btn {
+            padding: 10px 20px;
+            font-weight: bold;
+        }
+
+        .btn.btn-primary {
+            background-color: #5c6bc0;
+            border: none;
+        }
+
+        .btn.btn-primary:hover {
+            background-color: #495bb5;
+        }
+
+        form input, form textarea, form select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccd2e4;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            font-size: 1rem;
+        }
+
+        form input:focus, form textarea:focus, form select:focus {
+            border-color: #5c6bc0;
+            outline: none;
+            box-shadow: 0 0 5px rgba(92, 107, 192, 0.5);
+        }
+
+        form button {
+            cursor: pointer;
+            background-color: #26a69a;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 12px;
+            font-weight: bold;
+        }
+
+        form button:hover {
+            background-color: #219585;
+        }
+
+        .footer {
+            background-color: #2e2e2e;
+            color: #fff;
+            padding: 20px 0;
+        }
+
+        .footer p {
+            margin: 0;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .mt-4 {
+            margin-top: 1.5rem;
+        }
+
+        .mt-5 {
+            margin-top: 3rem;
+        }
+
+        .py-5 {
+            padding: 3rem 0;
+        }
+
+        .header-bg {
+            display: flex;
+            justify-content: center; /* Centraliza o conteúdo da header */
+            align-items: center; /* Alinha verticalmente os itens */
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto; /* Centraliza horizontalmente */
+            background-color: #f5f5dc; /* Cor de fundo bege */
+        }
+
+        .header h1 {
+            text-align: center; /* Centraliza o texto do h1 */
+            margin: 0; /* Remove margens para centralização correta */
+            font-size: 2.5rem; /* Ajuste o tamanho do título conforme necessário */
+            color: #2e2e2e; /* Cor do título */
+        }
+
+        .header-menu {
+            display: flex;
+            gap: 40px;
+        }
+
+        .header-menu a {
+            color: #ffffff;
+            display: inline-block;
+            padding: 16px 0px;
+            font-size: 18px;
+        }
+
+        /* Estilos para o ícone do Instagram */
+        #instagram-icon {
+            position: fixed;
+            bottom: 20px; /* Distância do fundo da página */
+            right: 20px; /* Distância da direita da página */
+            z-index: 1000; /* Garante que o ícone fique acima de outros elementos */
+        }
+
+        #instagram-icon img {
+            width: 50px; /* Ajuste o tamanho do ícone */
+            height: auto; /* Mantém a proporção da imagem */
+            border-radius: 50%; /* Torna o ícone redondo, se necessário */
+            transition: transform 0.3s; /* Adiciona uma transição suave */
+        }
+
+        #instagram-icon:hover img {
+            transform: scale(1.1); /* Aumenta o ícone ao passar o mouse */
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container flex-column align-items-center">
+            <a class="navbar-brand" href="#"><img src="imagens/logo.png" alt="Logo Lar dos Anjos" width="80"></a>
+            <div class="d-flex">
+                <a class="nav-link active" href="#">Home</a>
+                <a class="nav-link" href="quem-somos.html">Quem Somos</a>
+                <a class="nav-link" href="contato.html">Contato</a>
+                <a class="nav-link" href="adote.html">Adote</a>
+                <a class="nav-link active" href="doar.html">Doação</a>
+            </div>
+        </div>
+    </nav>
+
+
+ <!-- Galeria de Fotos dos Cachorros -->
+
+
+
+                <!-- Controles de navegação -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#dogCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#dogCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Próximo</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Header/Capa -->
+    <header class="header-bg">
+        <div class="text-center"> <!-- Alinhamento centralizado -->
+            <h1 class="display-4">Protegendo os animais com amor</h1>
+            <p class="lead">Junte-se a nós para salvar vidas</p>
+            <a href="doar.html" class="btn btn-primary btn-lg">Faça uma Doação</a>
+        </div>
+    </header>
+
+ 
+    <!-- Nova Seção sobre a Importância de Ajudar os Cachorros de Rua -->
+    <section class="importance py-5">
+        <div class="container d-flex align-items-start">
+            <img src="imagens/cachorros.jpg" class="img-fluid" alt="Cachorros de rua">
+            <div>
+                <h2>A importância de ajudar os cachorros que moram na rua</h2>
+                <p>Os cachorros de rua enfrentam condições difíceis e muitas vezes não têm acesso a alimento, abrigo ou cuidados médicos. Ao ajudar, você não só salva vidas, mas também promove uma sociedade mais gentil e responsável. Cada contribuição faz a diferença!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre a ONG -->
+    <section class="about py-5">
+        <div class="container">
+            <h2 class="text-center">Sobre o Lar dos Anjos</h2>
+            <p class="text-center">Somos uma organização dedicada ao bem-estar e proteção dos animais. Fundada em 2016, nossa missão é promover a saúde e segurança dos animais em diversas regiões.</p>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="footer bg-dark text-light py-3">
+        <div class="container text-center">
+            <p>&copy; 2024 Lar dos Anjos. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+
+    <!-- Ícone do Instagram -->
+    <a href="https://www.instagram.com/lardosanjospet/" target="_blank" id="instagram-icon">
+        <img src="imagens/insta1.png" alt="Instagram" />
+    </a>
+
+    <!-- Bootstrap JS e dependências -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/scripts.js"></script>
+
+
+</body>
+</html>
